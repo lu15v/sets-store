@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
+import {Navbar, Nav, Form, FormControl} from 'react-bootstrap';
 
 const Nvbar = () => {
     return(
@@ -12,10 +12,8 @@ const Nvbar = () => {
                 <Nav.Link href="#pricing">Pricing</Nav.Link>
                 </Nav>
                 <Nav>
-                <Form className="justify-content-center">
+                <Form >
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <br/>
-                    <Button variant="primary">Search</Button>
                 </Form>
                 </Nav>
             </Navbar.Collapse>
