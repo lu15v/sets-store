@@ -1,0 +1,13 @@
+.card {
+    border: 1em;
+    padding: 16px;
+    border-color: none;
+    box-shadow: none;
+}
+
+.column{
+    width: 25%;
+    float: left;
+    padding: 10px 10px;	 
+}
+
