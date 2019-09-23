@@ -12,7 +12,7 @@ function App() {
           <Nvbar/>
           <ImageSlider/>
           <Suspense fallback={<div>Loading...</div>}>
-           <Gallery/>
+            <Gallery/>
           </Suspense>
     </Container>
   );
