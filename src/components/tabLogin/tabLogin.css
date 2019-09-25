@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
+.tab-container{
+    max-width: 620px !important;
+    width: 100%;
+    top: 10%;
+    margin: 0 auto !important;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    /*box-shadow: 2px 2px 3px 0 rgba(117,124,129,.12);
+    border: 1px solid #dbe2e8;*/
+    margin-top: 15% !important;
+}
+
+.nav-link{
+    width: 50%;
+}
