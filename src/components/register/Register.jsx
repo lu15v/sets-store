@@ -3,7 +3,7 @@ import {Form, Button, Row, Col} from 'react-bootstrap';
 
 const Register = () =>{
     return(
-        <Row>
+        <Row className="padding">
             <Col>
                 <Form>
                     <h3>Create your account</h3>

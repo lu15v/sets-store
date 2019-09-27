@@ -4,7 +4,7 @@ import './login.css'
 
 const Login = () =>{
     return(
-        <Row>
+        <Row className="padding">
             <Col>
                 <Form>
                     <h3>Registered Users</h3>
