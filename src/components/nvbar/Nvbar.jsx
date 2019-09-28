@@ -1,5 +1,6 @@
 import React from 'react';
 import {Navbar, Nav, Form, FormControl} from 'react-bootstrap';
+import './nvbar.css';
 
 const Nvbar = () => {
     return(
@@ -15,6 +16,12 @@ const Nvbar = () => {
                 <Form >
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                 </Form>
+                </Nav>
+                <Nav>
+                    <Nav.Link href="#login"><img className="img-width"  src="https://img.icons8.com/color/48/000000/login-as-user.png"/></Nav.Link>
+                </Nav>
+                <Nav>
+                    <Nav.Link href="#cart"><img className="img-width" src="https://img.icons8.com/plasticine/100/000000/shopping-cart.png" /></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
