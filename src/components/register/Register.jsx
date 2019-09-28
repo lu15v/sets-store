@@ -16,24 +16,19 @@ class Register extends React.Component {
 
     handleSubmit(event, param){
         event.preventDefault();
-        console.log(param);
     }
 
     handleChangeUserName = (event) => {
         this.setState({formValues: {...this.state.formValues, userName: event.target.value}})
-        console.log(event.target.value);
     }
     handleChangeEmail = (event) => {
         this.setState({formValues: {...this.state.formValues, email: event.target.value}})
-        console.log(event.target.value);
     }
     handleChangePassword = (event) => {
         this.setState({formValues: {...this.state.formValues, password: event.target.value}})
-        console.log(event.target.value);
     }
     handleChangeConfirmPassword = (event) => {
         this.setState({formValues: {...this.state.formValues, confirmPass: event.target.value}})
-        console.log(event.target.value);
     }
 
     render(){
