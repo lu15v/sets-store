@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.preview-container{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.img{
+    padding: 3em;
+}
+
+h1{
+    font-size: 1.5rem !important;
+}
+
+div.preview-container div p.desc{
+    width: auto;
+    max-width: 600px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+div.preview-container div p.desc.content{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.button{
+    width: 15% !important;
+    background-color: #02b3e4 !important;
+}
