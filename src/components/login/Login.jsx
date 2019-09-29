@@ -42,7 +42,7 @@ class Login extends React.Component{
                         <Form.Group controlId="formBasicCheckbox">
                             <p>By clicking Sign In, you agree to our Terms of Use and our Privacy Policy.</p>
                         </Form.Group>
-                        <Button className="button" type="submit">
+                        <Button className="button-sign-in" type="submit">
                             SIGN IN
                         </Button>
                         <Form.Group controlId="formBasicLink" className="padding-top">
