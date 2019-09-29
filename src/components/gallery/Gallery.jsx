@@ -6,7 +6,7 @@ const sets = [
     {
         id: 1,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/1/5616/3744",
+        img: "https://picsum.photos/id/1/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -14,7 +14,7 @@ const sets = [
     {
         id: 2,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/2/5616/3744",
+        img: "https://picsum.photos/id/2/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -22,7 +22,7 @@ const sets = [
     {
         id: 3,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/3/5616/3744",
+        img: "https://picsum.photos/id/3/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -30,7 +30,7 @@ const sets = [
     {
         id: 4,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/4/5616/3744",
+        img: "https://picsum.photos/id/4/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -38,7 +38,7 @@ const sets = [
     {
         id: 5,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/1011/5472/3648",
+        img: "https://picsum.photos/id/1011/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -46,7 +46,7 @@ const sets = [
     {
         id: 6,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/6/5616/3744",
+        img: "https://picsum.photos/id/6/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -54,7 +54,7 @@ const sets = [
     {
         id: 7,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/1008/5616/3744",
+        img: "https://picsum.photos/id/1008/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -62,7 +62,7 @@ const sets = [
     {
         id: 8,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/8/5616/3744",
+        img: "https://picsum.photos/id/8/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -70,7 +70,7 @@ const sets = [
     {
         id: 9,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/9/5616/3744",
+        img: "https://picsum.photos/id/9/212/375",
         title: "pack",
         desc: "something",
         price: 10
@@ -78,7 +78,7 @@ const sets = [
     {
         id: 10,
         girlName: 'Susan',
-        img: "https://picsum.photos/id/1004/5616/3744",
+        img: "https://picsum.photos/id/1004/212/375",
         title: "pack",
         desc: "something",
         price: 10
