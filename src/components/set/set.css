@@ -6,12 +6,14 @@
 }
 
 .column{
-    width: 25%;
+    width: 100%;
     float: left;
     padding: 10px 10px;	 
 }
 
 .column .img-size{
-    width: 212px;
-    height: 375px;
+    width: auto;
+    height: auto;
+    max-width: 212px;
+    max-height: 375px;
 }

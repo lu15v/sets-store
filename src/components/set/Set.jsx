@@ -8,7 +8,7 @@ const Set = (props) =>{
         <Card className="column">
             <h4>{props.girlName}</h4>
             <Link>
-                <Card.Img className="img-size" variant="top" src={props.img} />
+                <Card.Img variant="top" src={props.img} />
             </Link>
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
