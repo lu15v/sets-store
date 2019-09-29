@@ -88,7 +88,7 @@ const sets = [
 const Gallery = () => (
   <div className="cities-grid row">
     {sets.map((set) =>
-      <Set key={set.id} img={set.img} title={set.title} girlName={set.girlName} desc={set.desc} price={set.price}/>
+      <Set key={set.id} img={set.img} setNo={set.id} title={set.title} girlName={set.girlName} desc={set.desc} price={set.price}/>
     )}
   </div>
 );
