@@ -1,5 +1,7 @@
 import React from 'react';
 import {Form, Button, Row, Col} from 'react-bootstrap';
+import {register} from '../../api/user';
+import './register.css';
 
 class Register extends React.Component {
     constructor(){
@@ -16,6 +18,15 @@ class Register extends React.Component {
 
     handleSubmit(event, param){
         event.preventDefault();
+        const demo = {
+            "username": "demo",
+            "email": "demo@demo.com",
+            "password": "demo",
+            "created": 0,
+            "usertype": "user"
+          }
+        register(demo).then(res => console.log(",,,,,, ", res))
+                      .catch(err => console.log("------ ", err));
     }
 
     handleChangeUserName = (event) => {
@@ -68,7 +79,7 @@ class Register extends React.Component {
                         <Form.Group controlId="formBasicCheckbox">
                             <p>By clicking Sign In, you agree to our Terms of Use and our Privacy Policy.</p>
                         </Form.Group>
-                        <Button className="button" type="submit">
+                        <Button className="button-sign-up" type="submit">
                             SIGN UP
                         </Button>
                     </Form>
