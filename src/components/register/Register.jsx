@@ -1,6 +1,8 @@
 import React from 'react';
 import {Form, Button, Row, Col} from 'react-bootstrap';
 import {register} from '../../api/user';
+import CustomAlert from '../utilities/CustomAlert';
+
 import './register.css';
 
 class Register extends React.Component {
@@ -8,38 +10,37 @@ class Register extends React.Component {
         super();
         this.state = {
             formValues:{
-                userName: '',
+                username: '',
                 email: '',
                 password: '',
                 confirmPass: ''
             }
         }
+        this.handleSubmit = this.handleSubmit.bind();
     }
-
+    
     handleSubmit(event, param){
         event.preventDefault();
-        const demo = {
-            "username": "demo",
-            "email": "demo@demo.com",
-            "password": "demo",
-            "created": 0,
-            "usertype": "user"
-          }
-        register(demo).then(res => console.log(",,,,,, ", res))
-                      .catch(err => console.log("------ ", err));
+        if(this.passChecks())
+            register(param).then(console.log(",,,,,, "))
+                        .catch(err => console.log("------ ", err));
+    }
+    passChecks = () =>{
+        return this.state.formValues.password === this.state.formValues.confirmPass;
     }
 
     handleChangeUserName = (event) => {
-        this.setState({formValues: {...this.state.formValues, userName: event.target.value}})
+        this.setState({formValues: {...this.state.formValues, username: event.target.value}});
     }
     handleChangeEmail = (event) => {
-        this.setState({formValues: {...this.state.formValues, email: event.target.value}})
+        this.setState({formValues: {...this.state.formValues, email: event.target.value}});
     }
     handleChangePassword = (event) => {
-        this.setState({formValues: {...this.state.formValues, password: event.target.value}})
+        this.setState({formValues: {...this.state.formValues, password: event.target.value}});
+        
     }
     handleChangeConfirmPassword = (event) => {
-        this.setState({formValues: {...this.state.formValues, confirmPass: event.target.value}})
+        this.setState({formValues: {...this.state.formValues, confirmPass: event.target.value}});
     }
 
     render(){
@@ -51,8 +52,8 @@ class Register extends React.Component {
                         <p>Join to the **** family</p>
                         <Row>
                             <Col>
-                                <Form.Group controlId="userName">
-                                    <Form.Control type="userName" placeholder="Enter username"  value={this.state.formValues.userName} onChange={this.handleChangeUserName} required/>
+                                <Form.Group controlId="username">
+                                    <Form.Control type="username" placeholder="Enter username"  value={this.state.formValues.username} onChange={this.handleChangeUserName} required/>
                                 </Form.Group>
                             </Col>
                         </Row>
@@ -71,12 +72,13 @@ class Register extends React.Component {
                             </Col>
                             <Col>
                                 <Form.Group controlId="PasswordConfirm">
-                                    <Form.Control type="passwordConfirm" placeholder="Confirm password" value={this.state.formValues.confirmPass} onChange={this.handleChangeConfirmPassword} required />
+                                    <Form.Control type="password" placeholder="Confirm password" value={this.state.formValues.confirmPass} onChange={this.handleChangeConfirmPassword} required />
                                 </Form.Group>
                             </Col>
                             
                         </Row>
                         <Form.Group controlId="formBasicCheckbox">
+                            <CustomAlert visible={!this.passChecks()} variant="danger">Passwords must match</CustomAlert>
                             <p>By clicking Sign In, you agree to our Terms of Use and our Privacy Policy.</p>
                         </Form.Group>
                         <Button className="button-sign-up" type="submit">
