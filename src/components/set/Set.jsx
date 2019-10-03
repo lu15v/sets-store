@@ -7,7 +7,7 @@ const Set = (props) =>{
     return(
         <Card className="column">
             <h4>{props.girlName}</h4>
-            <Link>
+            <Link to={`/set/${props.setNo}`}>
                 <Card.Img variant="top" src={props.img} />
             </Link>
             <Card.Body>

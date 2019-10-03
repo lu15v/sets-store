@@ -13,7 +13,7 @@ class SetPreview extends React.Component{
             <div className="preview-container">
                 <Navbar/>
                 <Image className="img" src="https://picsum.photos/id/237/240/430"/>
-                <h1>Susan</h1>
+                <h1>Set by Susan</h1>
                 <>
                     <p className="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
                 </>
