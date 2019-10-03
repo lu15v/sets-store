@@ -5,6 +5,7 @@ import Menu from './containers/menu/Menu';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import TabLogin from './components/tabLogin/TabLogin';
 //import Login from './components/login/Login';
+import Footer from './components/footer/Footer';
 import SetPreview from './components/setPreview/SetPreview';
 
 //redux
@@ -27,6 +28,7 @@ function App() {
           </Switch>
         </Router>
       </Container>
+      <Footer/>
     </Provider>
     // <TabLogin/>
   );
