@@ -6,13 +6,13 @@ const Gallery = lazy(() => import('../../components/gallery/Gallery'));
 class Menu extends React.Component{
     render(){
         return(
-            <div>
+            <>
                 <Nvbar/>
                 <ImageSlider/>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Gallery/>
                 </Suspense>
-            </div>
+            </>
         );
     }
 }

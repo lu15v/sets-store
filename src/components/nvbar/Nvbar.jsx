@@ -7,7 +7,7 @@ import './nvbar.css';
 
 const Nvbar = (props) => {
     return(
-        <div>
+        <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -30,7 +30,7 @@ const Nvbar = (props) => {
                 </Navbar.Collapse>
             </Navbar> 
             {props.children}
-        </div>
+        </>
     );
 }
 

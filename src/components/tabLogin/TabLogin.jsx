@@ -7,7 +7,7 @@ import './tabLogin.css';
 
 const TabLogin = () => {
     return (
-        <div>
+        <>
             <div className="header">
             </div>
             <div className="tab-container">
@@ -20,7 +20,7 @@ const TabLogin = () => {
                     </Tab>
                 </Tabs>
             </div>
-        </div>
+        </>
        
     );
 }

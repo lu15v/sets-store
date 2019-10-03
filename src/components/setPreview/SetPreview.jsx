@@ -14,12 +14,12 @@ class SetPreview extends React.Component{
                 <Navbar/>
                 <Image className="img" src="https://picsum.photos/id/237/240/430"/>
                 <h1>Susan</h1>
-                <div>
+                <>
                     <p className="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-                </div>
-                <div>
+                </>
+                <>
                     <p className="desc content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-                </div>
+                </>
                 <Button className="button">Buy</Button>
             </div>
         );
