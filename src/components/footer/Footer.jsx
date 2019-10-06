@@ -12,7 +12,7 @@ const Footer = () =>{
             <div className="footer">
                 <Container>
                     <div className="footer-content">
-                        <a>Terms and Conditons</a> /
+                        <a href="/terms&cond">Terms and Conditons</a> /
                         <a>Model information</a>
                     </div>
                     <>
