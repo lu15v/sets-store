@@ -17,3 +17,11 @@
     max-width: 212px;
     max-height: 375px;
 }
+
+.button-set{
+    background-color: #f2476a !important;
+}
+
+.button-set:hover{
+    background-color: #eb2d3a;
+}

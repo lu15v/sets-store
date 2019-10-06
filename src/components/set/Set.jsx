@@ -17,7 +17,7 @@ const Set = (props) =>{
                 </Card.Text>
                 <p>{`$ ${props.price} MXN`}</p>
                 <Link to={`/set/${props.setNo}`}>
-                    <Button variant="primary">Buy</Button>
+                    <Button className="button-set">Buy</Button>
                 </Link>
             </Card.Body>
         </Card>
