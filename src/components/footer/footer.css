@@ -20,7 +20,10 @@
     padding: 1rem 1rem;
 }
 
-a{
-    color: white !important;
+.footer-content a{
+    color: white;
     text-decoration: none;
+}
+.footer-content a:hover{
+    color: white;
 }
