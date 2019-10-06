@@ -19,3 +19,8 @@
     width: 80px;
     padding: 1rem 1rem;
 }
+
+a{
+    color: white !important;
+    text-decoration: none;
+}

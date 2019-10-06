@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.terms-text{
+    text-align: justify;
+    font-family: 'Lato', sans-serif;
+}
+
+.terms-text .headrs{
+    color: 	#eb2d3a;
+}
