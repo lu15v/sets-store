@@ -16,17 +16,14 @@ class Register extends React.Component {
                 confirmPass: ''
             }
         }
-        this.handleSubmit = this.handleSubmit.bind();
     }
     
-    handleSubmit(event, param){
+    handleSubmit = (event, param) =>{
         event.preventDefault();
-        if(this.passChecks())
+        console.log(this);
+        if(this.state.formValues.password === this.state.formValues.confirmPass)
             register(param).then(console.log(",,,,,, "))
                         .catch(err => console.log("------ ", err));
-    }
-    passChecks = () =>{
-        return this.state.formValues.password === this.state.formValues.confirmPass;
     }
 
     handleChangeUserName = (event) => {
@@ -78,10 +75,10 @@ class Register extends React.Component {
                             
                         </Row>
                         <Form.Group controlId="formBasicCheckbox">
-                            <CustomAlert visible={!this.passChecks()} variant="danger">Passwords must match</CustomAlert>
+                            <CustomAlert visible={!(this.state.formValues.password === this.state.formValues.confirmPass)} variant="danger">Passwords must match</CustomAlert>
                             <p>By clicking Sign In, you agree to our Terms of Use and our Privacy Policy.</p>
                         </Form.Group>
-                        <Button className="button-sign-up" type="submit">
+                        <Button className="button-sign-up" type="submit" disabled={!(this.state.formValues.password === this.state.formValues.confirmPass)}>
                             SIGN UP
                         </Button>
                     </Form>
