@@ -86,15 +86,17 @@ const sets = [
     }
 ]
 
-const Gallery = () => (
-  <div className="cities-grid row">
-    {sets.map((set) =>
-     <Col xs={12} sm={6} md={6} lg={3} xl={3}>
-        <Set key={set.id} img={set.img} setNo={set.id} title={set.title} girlName={set.girlName} desc={set.desc} price={set.price}/>
-     </Col>
-    )}
-  </div>
-);
+const Gallery = () => {
+  return(
+        <div className="cities-grid row">
+        {sets.map((set) =>
+        <Col key={set.id} xs={12} sm={6} md={6} lg={3} xl={3}>
+            <Set key={set.id} img={set.img} setNo={set.id} title={set.title} girlName={set.girlName} desc={set.desc} price={set.price}/>
+        </Col>
+        )}
+    </div>
+  );
+}
 
 
 export default Gallery;
