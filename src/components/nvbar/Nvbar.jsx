@@ -22,10 +22,10 @@ const Nvbar = (props) => {
                     </Form>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/login"><img className="img-width"  src="https://img.icons8.com/color/48/000000/login-as-user.png"/></Nav.Link>
+                        <Nav.Link href="/login"><img className="img-width"  alt="login" src="https://img.icons8.com/color/48/000000/login-as-user.png"/></Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#cart"><img className="img-width" src="https://img.icons8.com/plasticine/100/000000/shopping-cart.png" /></Nav.Link>
+                        <Nav.Link href="#cart"><img className="img-width" alt="cart" src="https://img.icons8.com/plasticine/100/000000/shopping-cart.png" /></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar> 
