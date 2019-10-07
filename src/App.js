@@ -8,6 +8,7 @@ import TabLogin from './components/tabLogin/TabLogin';
 import Footer from './components/footer/Footer';
 import SetPreview from './components/setPreview/SetPreview';
 import Terms from './components/terms/Terms';
+import Cart from './components/cart/Cart';
 
 //redux
 import {reducer} from './redux/reducers/reducer';
@@ -26,6 +27,7 @@ function App() {
             <Route path='/login' component={TabLogin}/>
             <Route path='/set/:id' component={SetPreview}/>
             <Route path='/terms&cond' component={Terms}/>
+            <Route path='/cart' component={Cart}/>
             {/*<Route component={DefaultPage} />*/}
           </Switch>
         </Router>

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.cart-content{
+    font-family: 'Lato', sans-serif;
+    margin-top: 2rem;
+}
+
+
+.cart-content .col-buy-section{
+    margin-top: 3rem;
+}
+
+.cart-content .buy-container{
+    border: 1px solid #ccc;
+}
+
+.cart-content .col-buy-section .buy-container h4{
+    font-weight: bold;
+}
+.cart-content .col-buy-section .buy-container h4.price{
+    color:#fb654e;
+    text-align: left;
+}
+.cart-content .col-buy-section .buy-container h4.subtotal{
+    text-align: end;
+}
+.button-checkout{
+    width: 100px; 
+    background-color: #f2476a !important;
+    margin-bottom: 1rem;
+}
+
+.cart-button-container{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 530px) {
+    .cart-content .col-buy-section .buy-container h4.subtotal{
+        font-size: 0.8rem;
+    }
+    .cart-content .col-buy-section .buy-container h4.price{
+        font-size: 0.8rem;
+    }
+   
+  }
