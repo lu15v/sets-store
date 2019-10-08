@@ -1,5 +1,6 @@
 import React from 'react';
-import Set from '../set/Set';
+//import Set from '../set/Set';
+import Set from '../../containers/set/Set';
 import {Col} from 'react-bootstrap';
 import './gallery.css';
 
@@ -91,7 +92,7 @@ const Gallery = () => {
         <div className="cities-grid row">
         {sets.map((set) =>
         <Col key={set.id} xs={12} sm={6} md={6} lg={3} xl={3}>
-            <Set key={set.id} img={set.img} setNo={set.id} title={set.title} girlName={set.girlName} desc={set.desc} price={set.price}/>
+            <Set key={set.id} set={set}/>
         </Col>
         )}
     </div>
