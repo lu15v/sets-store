@@ -10,7 +10,7 @@ class Cart extends React.Component{
             <>
             <Nvbar/>
             <Row className="cart-content">
-                <Col>
+                <Col className="cart-list">
                     <ListGroup variant="flush">
                         <CartItem message="Cras justo odio"/>
                         <CartItem message="Dapibus ac facilisis in"/>

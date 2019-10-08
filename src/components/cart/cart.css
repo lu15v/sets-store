@@ -5,6 +5,10 @@
     margin-top: 2rem;
 }
 
+.cart-content .cart-list{
+    overflow: auto;
+    height: 500px;
+}
 
 .cart-content .col-buy-section{
     margin-top: 3rem;
