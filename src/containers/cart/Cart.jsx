@@ -1,10 +1,15 @@
 import React from 'react';
-import Nvbar from '../nvbar/Nvbar';
+import Nvbar from '../../components/nvbar/Nvbar';
 import {ListGroup, Row, Col, Button} from 'react-bootstrap';
 import CartItem from './CartItem';
 import './cart.css';
 
+import {connect} from 'react-redux';
+
 class Cart extends React.Component{
+    componentDidMount(){
+        console.log(this.props.getState)
+    }
     render(){
         return(
             <>
@@ -12,10 +17,9 @@ class Cart extends React.Component{
             <Row className="cart-content">
                 <Col className="cart-list">
                     <ListGroup variant="flush">
-                        <CartItem message="Cras justo odio"/>
-                        <CartItem message="Dapibus ac facilisis in"/>
-                        <CartItem message="Morbi leo risus"/>
-                        <CartItem message="Porta ac consectetur ac"/>
+                        {this.props.cartList.map((item, idx) =>
+                            <CartItem key={idx} message={item.desc}/>
+                        )}
                     </ListGroup>
                 </Col>
                 <Col className="col-buy-section">
@@ -35,5 +39,11 @@ class Cart extends React.Component{
     }
 }
 
+const mapStateToProps = state =>{
+    return{
+        cartList: state.cartItems,
+        getState: state
+    };
+}
 
-export default Cart;
+export default  connect(mapStateToProps)(Cart);

@@ -5,11 +5,14 @@ const initState = {
     cartItems: []
 };
 
-export const reducer = (state = initState, action) =>{
+const reducer = (state = initState, action) =>{
     switch(action.type){
         case ADD_ITEM:
-            return {...state, cartItems: state.cartItems.push(action.payload)}
+            console.log(state.cartItems)
+            return {...state, cartItems: state.cartItems.concat(action.payload)}
         default:
             return state;
     }
 }
+
+export default reducer;

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Navbar, Nav, Form, FormControl} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 //import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import TabLogin from '../tabLogin/TabLogin';
 
@@ -22,10 +23,10 @@ const Nvbar = (props) => {
                     </Form>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/login"><img className="img-width"  alt="login" src="https://img.icons8.com/color/48/000000/login-as-user.png"/></Nav.Link>
+                        <Link to="/login"><img className="img-width"  alt="login" src="https://img.icons8.com/color/48/000000/login-as-user.png"/></Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/cart"><img className="img-width" alt="cart" src="https://img.icons8.com/plasticine/100/000000/shopping-cart.png" /></Nav.Link>
+                        <Link to="/cart"><img className="img-width" alt="cart" src="https://img.icons8.com/plasticine/100/000000/shopping-cart.png" /></Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar> 

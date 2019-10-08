@@ -31,12 +31,6 @@ class Set extends React.Component {
     }
 }
 
-const mapStateToProps = state =>{
-    return{
-        cartList: state.cartItems
-    };
-}
-
 const mapDispatchToProps = dispatch =>{
     return{
         addItem: payload => dispatch(addItem(payload))
@@ -44,4 +38,4 @@ const mapDispatchToProps = dispatch =>{
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Set);
+export default connect(null, mapDispatchToProps)(Set);

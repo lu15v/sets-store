@@ -8,14 +8,15 @@ import TabLogin from './components/tabLogin/TabLogin';
 import Footer from './components/footer/Footer';
 import SetPreview from './components/setPreview/SetPreview';
 import Terms from './components/terms/Terms';
-import Cart from './components/cart/Cart';
+import Cart from './containers/cart/Cart';
 
 //redux
-import {reducer} from './redux/reducers/reducer';
+import reducer from './redux/reducers/reducer';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
 
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(thunk));
 
 function App() {
   return (
