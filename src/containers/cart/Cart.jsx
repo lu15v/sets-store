@@ -7,8 +7,11 @@ import './cart.css';
 import {connect} from 'react-redux';
 
 class Cart extends React.Component{
-    componentDidMount(){
-        console.log(this.props.getState)
+
+    total = () => {
+        if(this.props.cartList.length > 0 )
+            return Object.values(this.props.cartList).reduce(function(acc, item) {return acc + item.price;},0)
+        return 0;
     }
     render(){
         return(
@@ -25,8 +28,8 @@ class Cart extends React.Component{
                 <Col className="col-buy-section">
                     <div className="buy-container">
                         <Row>
-                            <Col xs={6} sm={6} md={6}><h4 className="subtotal">Subtotal (items 4): </h4></Col>
-                            <Col xs={6} sm={6} md={6}><h4 className="price">$100</h4></Col>
+                            <Col xs={6} sm={6} md={6}><h4 className="subtotal">{`Subtotal (items ${this.props.cartList.length}):`} </h4></Col>
+                            <Col xs={6} sm={6} md={6}><h4 className="price">{`$ ${this.total()}`}</h4></Col>
                         </Row>
                         <Row className="cart-button-container">
                             <Col><Button className="button-checkout">Checkout</Button></Col>
