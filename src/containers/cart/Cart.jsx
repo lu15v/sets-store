@@ -44,8 +44,7 @@ class Cart extends React.Component{
 
 const mapStateToProps = state =>{
     return{
-        cartList: state.cartItems,
-        getState: state
+        cartList: state.cartItems
     };
 }
 
