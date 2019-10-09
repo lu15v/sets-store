@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+div.message {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+div.message h4.main-message{
+    color: #f2476a;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+div.message p.secondary-message{
+    font-size: 1rem;
+}
+
+.separation{
+    margin-top: 2rem;
+}
