@@ -22,7 +22,7 @@ class Cart extends React.Component{
                 <Col className="cart-list">
                     <ListGroup variant="flush">
                         {[...this.props.cartList.values()].map((item, idx) =>
-                            <CartItem key={idx} message={item.desc} delFunc={this.props.deleteItem} idx={idx}/>
+                            <CartItem key={idx} set={item} delFunc={this.props.deleteItem} />
                         )}
                     </ListGroup>
                 </Col>

@@ -4,7 +4,7 @@ import close from '../../assets/icons/delete.png'
 import './cartItem.css';
 
 const CartItem = (props) =>{
-    const {message} = props;
+    const {delFunc, set } = props;
     return(
         <ListGroup.Item>
             <Row>
@@ -15,11 +15,13 @@ const CartItem = (props) =>{
                 </Col>
                 <Col xs={6} sm={8} md={8} lg={8} xl={8}>
                     <div className="set-desc">
-                        {message} 
+                        {set.title} 
                     </div>
                 </Col>
                 <Col xs={1} sm={2} md={2} lg={2} xl={2}  className="close-cart-style">
-                    <Image src={close}/> 
+                    <a onClick={() => delFunc(set)}>
+                        <Image src={close}/> 
+                    </a>
                 </Col>
             </Row>
         </ListGroup.Item>
