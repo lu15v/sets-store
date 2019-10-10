@@ -9,7 +9,7 @@ import Footer from './components/footer/Footer';
 import SetPreview from './components/setPreview/SetPreview';
 import Terms from './components/terms/Terms';
 import Cart from './containers/cart/Cart';
-
+import DisplayMessageWHeader from './components/utilities/DisplayMessageWHeader';
 //redux
 import reducer from './redux/reducers/reducer';
 import {Provider} from 'react-redux';
@@ -29,6 +29,7 @@ function App() {
             <Route path='/set/:id' component={SetPreview}/>
             <Route path='/terms&cond' component={Terms}/>
             <Route path='/cart' component={Cart}/>
+            <Route path='/verify' render={() => <DisplayMessageWHeader header={"Just one more step...."} body={"We are very happy to have you here! But first, check your email and verify your account"}/>}/>
             {/*<Route component={DefaultPage} />*/}
           </Switch>
         </Router>
