@@ -41,7 +41,7 @@ class Cart extends React.Component{
                             </div>
                         </Col>
                 </Row>
-            : <DisplayMessage/>}
+            : <DisplayMessage header={"Empty Cart"} message={"Start looking at our sets, we are sure you're gonna love them!"}/>}
             </>
         );
     }

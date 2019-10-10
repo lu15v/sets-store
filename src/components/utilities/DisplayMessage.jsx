@@ -1,12 +1,13 @@
 import React from 'react';
 import './displayMessage.css';
 
-const DisplayMessage = () =>{
+const DisplayMessage = (props) =>{
+    const {header, message} = props
     return(
         <div className="separation">
             <div className="message">
-                <h4 className="main-message">Empty Cart</h4>
-                <p className="secondary-message">Start looking at our sets, we are sure you're gonna love them!</p>
+                <h4 className="main-message">{header}</h4>
+                <p className="secondary-message">{message}</p>
             </div>
         </div>
     )
