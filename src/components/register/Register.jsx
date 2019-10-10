@@ -20,9 +20,9 @@ class Register extends React.Component {
     
     handleSubmit = (event, param) =>{
         event.preventDefault();
-        console.log(this);
+        console.log(param);
         if(this.state.formValues.password === this.state.formValues.confirmPass)
-            register(param).then(console.log(",,,,,, "))
+            register(param).then(res => console.log(",,,,,, ", res))
                         .catch(err => console.log("------ ", err));
     }
 
