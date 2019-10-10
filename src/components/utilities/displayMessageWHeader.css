@@ -1,0 +1,13 @@
+
+.header{
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1.5rem 1em;
+    -webkit-box-shadow: 0 5px 15px 0 rgba(46,61,73,.12);
+    box-shadow: 0 5px 15px 0 rgba(46,61,73,.12);
+}
