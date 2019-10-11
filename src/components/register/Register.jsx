@@ -2,13 +2,16 @@ import React from 'react';
 import {Form, Button, Row, Col} from 'react-bootstrap';
 import {register} from '../../api/user';
 import CustomAlert from '../utilities/CustomAlert';
+import InformativeModal from '../utilities/InformativeModal';
 
 import './register.css';
 
 class Register extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
+            userError: '',
+            emailError: '',
             formValues:{
                 username: '',
                 email: '',
@@ -20,11 +23,23 @@ class Register extends React.Component {
     
     handleSubmit = (event, param) =>{
         event.preventDefault();
-        console.log(param);
         if(this.state.formValues.password === this.state.formValues.confirmPass)
             register(param).then(res => console.log(",,,,,, ", res))
-                        .catch(err => console.log("------ ", err));
-    }
+                        .catch(err => 
+                               { if(err.response.data.message.length > 1){
+                                    this.setState({userError: err.response.data.message[0].properties.message,
+                                               emailError: err.response.data.message[1].properties.message})
+                                }else if(err.response.data.message[0].properties.path === "username"){
+                                    this.setState({userError: err.response.data.message[0].properties.message, emailError: ''})
+                                }else if(err.response.data.message[0].properties.path === "email"){
+                                    this.setState({userError: '', emailError: err.response.data.message[0].properties.message})
+                                }
+                                else{
+                                    this.setState({userError: '',
+                                        emailError: ''})
+                                }
+                            });
+    }   
 
     handleChangeUserName = (event) => {
         this.setState({formValues: {...this.state.formValues, username: event.target.value}});
@@ -43,6 +58,7 @@ class Register extends React.Component {
     render(){
         return(
             <Row className="padding">
+                <InformativeModal title="title" body="body"/>
                 <Col>
                     <Form onSubmit={(e) => this.handleSubmit(e, this.state.formValues)}>
                         <h3>Create your account</h3>
@@ -51,6 +67,7 @@ class Register extends React.Component {
                             <Col>
                                 <Form.Group controlId="username">
                                     <Form.Control type="username" placeholder="Enter username"  value={this.state.formValues.username} onChange={this.handleChangeUserName} required/>
+                                    <CustomAlert visible={this.state.userError != ''} variant="danger">{this.state.userError}</CustomAlert>
                                 </Form.Group>
                             </Col>
                         </Row>
@@ -58,6 +75,7 @@ class Register extends React.Component {
                             <Col>
                                 <Form.Group controlId="Email">
                                     <Form.Control type="email" placeholder="Enter email" value={this.state.formValues.email} onChange={this.handleChangeEmail} required/>
+                                    <CustomAlert visible={this.state.emailError != ''} variant="danger">{this.state.emailError}</CustomAlert>
                                 </Form.Group>
                             </Col>
                         </Row>
