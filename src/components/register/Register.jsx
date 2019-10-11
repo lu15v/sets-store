@@ -3,6 +3,7 @@ import {Form, Button, Row, Col} from 'react-bootstrap';
 import {register} from '../../api/user';
 import CustomAlert from '../utilities/CustomAlert';
 import InformativeModal from '../utilities/InformativeModal';
+import {Redirect} from 'react-router-dom';
 
 import './register.css';
 
@@ -12,6 +13,7 @@ class Register extends React.Component {
         this.state = {
             userError: '',
             emailError: '',
+            redirect: false,
             formValues:{
                 username: '',
                 email: '',
@@ -24,7 +26,7 @@ class Register extends React.Component {
     handleSubmit = (event, param) =>{
         event.preventDefault();
         if(this.state.formValues.password === this.state.formValues.confirmPass)
-            register(param).then(res => console.log(",,,,,, ", res))
+            register(param).then(res => this.setState({redirect: true}))
                         .catch(err => 
                                { if(err.response.data.message.length > 1){
                                     this.setState({userError: err.response.data.message[0].properties.message,
@@ -40,7 +42,6 @@ class Register extends React.Component {
                                 }
                             });
     }   
-
     handleChangeUserName = (event) => {
         this.setState({formValues: {...this.state.formValues, username: event.target.value}});
     }
@@ -56,6 +57,13 @@ class Register extends React.Component {
     }
 
     render(){
+        const { redirect } = this.state;
+
+        if(redirect)
+            return(
+                <Redirect to='/verify'/>
+            );
+
         return(
             <Row className="padding">
                 <InformativeModal title="title" body="body"/>
