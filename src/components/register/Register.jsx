@@ -4,7 +4,7 @@ import {register} from '../../api/user';
 import CustomAlert from '../utilities/CustomAlert';
 import InformativeModal from '../utilities/InformativeModal';
 import {Redirect} from 'react-router-dom';
-
+import Spin from '../spin/Spin';
 import './register.css';
 
 class Register extends React.Component {
@@ -14,6 +14,7 @@ class Register extends React.Component {
             userError: '',
             emailError: '',
             redirect: false,
+            spin: false,
             formValues:{
                 username: '',
                 email: '',
@@ -25,22 +26,24 @@ class Register extends React.Component {
     
     handleSubmit = (event, param) =>{
         event.preventDefault();
-        if(this.state.formValues.password === this.state.formValues.confirmPass)
-            register(param).then(res => this.setState({redirect: true}))
+        if(this.state.formValues.password === this.state.formValues.confirmPass){
+            this.setState({spin: true})
+            register(param).then(res => this.setState({redirect: true, spin: false}))
                         .catch(err => 
                                { if(err.response.data.message.length > 1){
                                     this.setState({userError: err.response.data.message[0].properties.message,
-                                               emailError: err.response.data.message[1].properties.message})
+                                               emailError: err.response.data.message[1].properties.message, spin: false})
                                 }else if(err.response.data.message[0].properties.path === "username"){
-                                    this.setState({userError: err.response.data.message[0].properties.message, emailError: ''})
+                                    this.setState({userError: err.response.data.message[0].properties.message, emailError: '', spin: false})
                                 }else if(err.response.data.message[0].properties.path === "email"){
-                                    this.setState({userError: '', emailError: err.response.data.message[0].properties.message})
+                                    this.setState({userError: '', emailError: err.response.data.message[0].properties.message, spin: false})
                                 }
                                 else{
                                     this.setState({userError: '',
-                                        emailError: ''})
+                                        emailError: '', spin: false})
                                 }
                             });
+            }
     }   
     handleChangeUserName = (event) => {
         this.setState({formValues: {...this.state.formValues, username: event.target.value}});
@@ -57,7 +60,8 @@ class Register extends React.Component {
     }
 
     render(){
-        const { redirect } = this.state;
+        const { redirect, spin } = this.state;
+
 
         if(redirect)
             return(
@@ -109,6 +113,7 @@ class Register extends React.Component {
                         </Button>
                     </Form>
                 </Col>
+                <Spin active={spin}/>
             </Row>
         );
     }
