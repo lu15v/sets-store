@@ -79,7 +79,7 @@ class Register extends React.Component {
                             <Col>
                                 <Form.Group controlId="username">
                                     <Form.Control type="username" placeholder="Enter username"  value={this.state.formValues.username} onChange={this.handleChangeUserName} required/>
-                                    <CustomAlert visible={this.state.userError != ''} variant="danger">{this.state.userError}</CustomAlert>
+                                    <CustomAlert visible={this.state.userError !== ''} variant="danger">{this.state.userError}</CustomAlert>
                                 </Form.Group>
                             </Col>
                         </Row>
@@ -87,7 +87,7 @@ class Register extends React.Component {
                             <Col>
                                 <Form.Group controlId="Email">
                                     <Form.Control type="email" placeholder="Enter email" value={this.state.formValues.email} onChange={this.handleChangeEmail} required/>
-                                    <CustomAlert visible={this.state.emailError != ''} variant="danger">{this.state.emailError}</CustomAlert>
+                                    <CustomAlert visible={this.state.emailError !== ''} variant="danger">{this.state.emailError}</CustomAlert>
                                 </Form.Group>
                             </Col>
                         </Row>
